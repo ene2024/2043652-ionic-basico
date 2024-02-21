@@ -19,6 +19,7 @@ function agregar(){
     total += monto;
 
     seccTicket.insertBefore(newE, totParra);
+    totParra.textContent = "Total: $" + total;
     limpiar();
 }
 
