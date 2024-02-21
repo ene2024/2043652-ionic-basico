@@ -4,20 +4,40 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     
-
-    <title>Práctica 1 </title>
+    <title>Practica 4</title>
 
 </head>
 <body>
-    <input id="txt" placeholder="Write here" type="text">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title  color="tertiary">Presupuesto</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-    <button class="button1" type="button">Print</button>
-    <button class ="buttom2" onclick="limpiar()" type="button">Erase</button> 
-    <button class = "buttom3" onclick="cambiarColorPagina()"> Cambiar página </button>
+    <ion-content class="ion-padding">
+        <ion-input id="tipo-gasto" label="Tipo de gasto"></ion-input>
+        <ion-input id="monto" label="Monto"></ion-input>
+        <ion-button onclick="agregar()" color="secondary">Agregar</ion-button>
+        
+        <ion-footer>
+            <ion-toolbar color="primary" class="ion-ticket">
+                <ion-title>Ticket de compra</ion-title>
+            </ion-toolbar>
+        </ion-footer>
+
+        <section id="seccTicket">
+            <p id="totParra"></p>
+            <h5>Total: $</h5>
+        </section>
+
+    </ion-content>
 
 </body>
-
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 <script src="script.js"></script>
 </html>
