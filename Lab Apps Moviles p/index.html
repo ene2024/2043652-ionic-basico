@@ -8,33 +8,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     
-    <title>Practica 4</title>
+    <title>Practica 5</title>
 
 </head>
 <body>
-    <ion-header>
-        <ion-toolbar color="primary">
-            <ion-title  color="tertiary">Presupuesto</ion-title>
-        </ion-toolbar>
-    </ion-header>
+    <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="12" size-md="3">1</ion-col>
+          <ion-col size="12" size-md="3">2</ion-col>
+          <ion-col size="12" size-md="3">3</ion-col>
+          <ion-col size="12" size-md="3">4</ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col>1</ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="12" size-md="1">1</ion-col>
+          <ion-col size="12" size-md="1">2</ion-col>
+          <ion-col size="12" size-md="1">3</ion-col>
+          <ion-col size="12" size-md="1">4</ion-col>
+          <ion-col size="12" size-md="1">5</ion-col>
+          <ion-col size="12" size-md="1">6</ion-col>
+          <ion-col size="12" size-md="1">7</ion-col>
+          <ion-col size="12" size-md="1">8</ion-col>
+          <ion-col size="12" size-md="1">9</ion-col>
+          <ion-col size="12" size-md="1">10</ion-col>
+          <ion-col size="12" size-md="1">11</ion-col>
+          <ion-col size="12" size-md="1">12</ion-col>
+        </ion-row>
+      </ion-grid>
 
-    <ion-content class="ion-padding">
-        <ion-input id="tipo-gasto" label="Tipo de gasto"></ion-input>
-        <ion-input id="monto" label="Monto"></ion-input>
-        <ion-button onclick="agregar()" color="secondary">Agregar</ion-button>
-        
-        <ion-footer>
-            <ion-toolbar color="primary" class="ion-ticket">
-                <ion-title>Ticket de compra</ion-title>
-            </ion-toolbar>
-        </ion-footer>
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="12" size-md="6">1</ion-col>
+          <ion-col size="12" size-md="2">2</ion-col>
+          <ion-col size="12" size-md="3">3</ion-col>
+          <ion-col size="12" size-md="1">4</ion-col>
 
-        <section id="seccTicket">
-            
-            <h5 id="totParra">Total: $</h5>
-        </section>
-
-    </ion-content>
+        </ion-row>
+      </ion-grid>
 
 </body>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
