@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ListaAlumnosComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
