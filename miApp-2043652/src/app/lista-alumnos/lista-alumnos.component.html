@@ -3,5 +3,22 @@
 </p>
 
 <div *ngFor="let alumno of alumnos">
-   <ion-list><ion-item>{{alumno}}</ion-item></ion-list>
+   <ion-list>
+    <ion-item-sliding> <ion-item>{{alumno}}</ion-item>
+    
+      <ion-item-options>
+        <ion-item-option>Favorite</ion-item-option>
+        <ion-item-option color="danger" (click)="setOpen(true)">Delete</ion-item-option>
+        <ion-action-sheet
+          [isOpen]="isActionSheetOpen"
+          header="Actions"
+          [buttons]="actionSheetButtons"
+          (didDismiss)="setOpen(false)"
+></ion-action-sheet>
+      </ion-item-options>
+
+    </ion-item-sliding>
+   </ion-list>
+
+   
 </div>
