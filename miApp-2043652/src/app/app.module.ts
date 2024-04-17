@@ -12,8 +12,9 @@ import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 
 import { ProductosComponent } from './productos/productos.component';
 
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 @NgModule({
-  declarations: [AppComponent, ListaAlumnosComponent, ProductosComponent],
+  declarations: [AppComponent, ListaAlumnosComponent, ProductosComponent, ProductoDetalleComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
