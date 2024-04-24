@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { alumno } from './alumno.model';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -10,29 +12,39 @@ export class ListaAlumnosComponent  implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    
+  }  
+
+  result: string = '';
   
-  alumnos : any = ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
+  
 
-  isActionSheetOpen = false;
-  public actionSheetButtons = [
+  alumnos : alumno[] = [
     {
-      text: 'Delete',
-      role: 'destructive',
-      data: {
-        action: 'delete',
-      },
+      nombre : 'Katherine Hernandez',
+      presente: true
     },
     {
-      text: 'Cancel',
-      role: 'cancel',
-      data: {
-        action: 'cancel',
-      },
+      nombre: 'Ana Martinez',
+      presente: true
     },
-  ];
+    {
+      nombre: 'Williams Sanchez',
+      presente: false
+    }
+  ]; //= ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
 
-  setOpen(isOpen: boolean) {
-    this.isActionSheetOpen = isOpen;
+  agregaAlumno(): void{
+    this.alumnos.push(this.alumno);
+
+    this.alumno = {
+      nombre: '',
+      presente: false
+    }
   }
+  alumno: alumno = {
+    nombre: '',
+    presente: false
+  }  
 }

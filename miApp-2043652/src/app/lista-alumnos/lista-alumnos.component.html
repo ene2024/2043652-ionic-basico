@@ -1,21 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Lista de Alumnos </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<div *ngFor="let alumno of alumnos">
-   <ion-list>
-    <ion-item-sliding> <ion-item>{{alumno}}</ion-item>
-    
-      <ion-item-options>
-        <ion-item-option>Favorite</ion-item-option>
-        <ion-item-option color="danger" (click)="setOpen(true)">Delete</ion-item-option>
-        <ion-action-sheet
-          [isOpen]="isActionSheetOpen"
-          header="Actions"
-          [buttons]="actionSheetButtons"
-          (didDismiss)="setOpen(false)"
-></ion-action-sheet>
-      </ion-item-options>
+<form #alumnosForm="ngForm" (ngSubmit)="agregaAlumno()">
+  <ion-label>Nombre
+    <ion-input required [(ngModel)]="alumno.nombre" placeholder="Nombre del alumno" name="nombre" fill="outline"></ion-input>
+  </ion-label>
+  <ion-label>
+    <ion-checkbox required [(ngModel)]="alumno.presente" name="presente" labelPlacement="start">Presente</ion-checkbox> 
+  </ion-label>
+  <div>
+    <ion-button type="submit">Agregar</ion-button>
+  </div>
+</form>
 
+<ion-card>
+  <ion-list *ngFor="let alumno of alumnos">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-avatar>
+        <ion-label>{{alumno.nombre}}</ion-label>
+        <ion-label>Asistió:{{alumno.presente}}</ion-label>
+      </ion-item>
     </ion-item-sliding>
-   </ion-list>
+  </ion-list>
+</ion-card>
 
-   
-</div>
+
