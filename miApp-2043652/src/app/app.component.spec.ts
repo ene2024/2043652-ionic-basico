@@ -1,9 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
+  defineCustomElements(window);
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
